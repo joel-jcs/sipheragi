@@ -1,103 +1,90 @@
 # SIMOS: Simulation Operating System for AI Agents
 
-Welcome to the **SIMOS** repository! SIMOS (Simulation Operating System) is a powerful AI Simulation Operating System designed to manage and operate AI Agents within simulated and real-world environments. It acts as the brain behind AI companions, enabling them to interact intelligently within games and other applications. This README provides an overview of SIMOS, its architecture, features, implementation examples, and how you can get started.
-
 ## Overview
+SIMOS (Simulation Operating System) is a powerful AI Simulation Operating System designed to manage and operate AI Agents within simulated and real-world environments. 
 
-SIMOS is at the heart of the SIPHER//AGI ecosystem. It's built to empower developers to create sophisticated AI Agents capable of learning, adapting, and interacting in complex environments. SIMOS handles everything from processing real-time game states to managing agent memories and decision-making processes. It bridges the gap between advanced AI models (LLMs) and interactive applications like games, providing a seamless integration that brings AI companions to life.
+SIMOS is at the heart of the SIPHER//AGI ecosystem. It's built to empower developers to create sophisticated AI Agents capable of learning, adapting, and interacting in complex environments. 
+
+SIMOS handles everything from processing real-time game states to managing agent memories and decision-making processes. It bridges the gap between advanced AI models (LLMs) and interactive applications like games, providing a seamless integration that brings AI companions to life.
+
 
 ## Glossary
-
-To help you navigate the terminology used in this project, here's a glossary of key terms:
-
-*   **SIPHER//AGI**: A platform designed to foster collaboration between humans and AI, starting with gaming.
-*   **AI Agent/Gaming Agent/AI Companion**: Refers to AI entities like KAIO, designed to interact within game environments.
-*   **Gaming AI Framework**: The underlying framework used to build AI Agents for gaming.
-*   **MOONBASE**: A discovery and trading platform for AI Agents developed by SIPHER//AGI.
+Terminology used throughout this project:
+*   **SIPHER//AGI**: A platform designed to accelerate and foster collaboration between humans and AI, with an initial focus on gaming, leveraging technologies like SIMOS.
 *   **SIMOS (Simulation Operating System)**: The core system that manages and operates AI Agents.
-*   **KAIO**: The first Gaming Agent developed by SIPHER//AGI, operating under SIMOS.
-*   **AUTOMA**: AI companions in Sipher Odyssey, powered by Utility AI within Unreal Engine.
-*   **Smart Object**: Interactive elements within Unreal Engine that AI Agents can interact with.
+*   **KAIO**: The first Gaming Agent developed by SIPHER//AGI, operating under SIMOS. It serves as a prime example of an AI companion within this ecosystem.
+*   **AI Agent/Gaming Agent/AI Companion**: Refers to AI entities like KAIO, designed to interact within gaming or other virtual environments.
+*   **Gaming AI Framework**: The underlying framework used to build AI Agents for gaming, such as KAIO.
 *   **Utility AI**: A custom AI decision-making implementation used by SIPHER//AGI for more dynamic AI behaviors.
+*   **AUTOMA**: AI companions in Sipher Odyssey, powered by Utility AI within Unreal Engine. These are distinct from agents like KAIO in their implementation and purpose.
+*   **Smart Object**: Interactive elements within Unreal Engine that AI Agents can interact with.
+*   **MOONBASE**: A discovery and trading platform for AI Agents developed by SIPHER//AGI.
+
 
 ## Architecture
+![SIMOS Architecture](<SIMOS Architecture.jpg>)
 
-SIMOS is designed with a modular architecture that allows for flexibility and scalability. Below are visual representations of the Gaming Agent Prototype and the public SIMOS architecture.
-
-**Gaming Agent Prototype Architecture (January 3, 2025):**
-
-![SIPHER GAME AGENT ROUGH ARCHITECTURE](https://prod-files-secure.s3.us-west-2.amazonaws.com/a29d0ad0-5c40-46dc-afd9-2ba0cc23a350/f9586860-ceb8-48fb-a0cc-ebca371a8e7c/SIPHER_GAME_AGENT_ROUGH_ARCHITECTURE.jpg)
-
-**Public SIMOS Architecture (January 8, 2025):**
-
-![SIMOS Architecture](https://prod-files-secure.s3.us-west-2.amazonaws.com/a29d0ad0-5c40-46dc-afd9-2ba0cc23a350/1bc0bcfa-9e39-4538-a30c-9e33f5bbd457/SIMOS_Architecture.jpg)
-
-**Key Architectural Components**:
-
-1.  **Interface with Game Engine (Unreal Engine)**: SIMOS communicates with the game engine to receive real-time state updates and send commands.
-2.  **Large Language Model (LLM) Integration**: LLMs act as the "brain" of the AI Agents, processing information and making decisions.
-3.  **Knowledge Base**: A repository of information about the game, including Smart Object definitions, game rules, and sample LLM interactions, used to inform the LLM.
-4.  **Agent Memory System**: Allows AI Agents to remember past interactions and learn from them.
-5.  **Real-time State Tracking**: Monitors the state of AI Agents and the game environment.
 
 ## Features
 
-SIMOS boasts a range of features designed to enhance the capabilities of AI Agents. Here are some of the key features:
-
 ### Current Features (as of January 14, 2025)
 
-*   **Agent Memory System**: Enables AI Agents to retain information about past interactions, allowing for more personalized and engaging experiences.
-*   **Real-Time KAIO Agent State Tracking (To Do)**:  Provides live monitoring of AI Agent states, offering insights into their performance and status.
-*   **Integration with Moonbase**: While primarily focused on SIMOS, the system is designed to be compatible with Moonbase, the platform for showcasing and sharing AI Agents.
+*   **Agent Memory System**: A core feature of SIMOS, this system allows AI companions to retain information about past interactions. This enables them to grow with players, participate in narrative events, and build more meaningful relationships, enriching the overall experience.
+*   **[In-Development] Real-Time Agent State Tracking**:  SIMOS is being enhanced to provide live monitoring of AI Agent states. This will give developers and users valuable insights into agent performance and status.
+
 
 ### Future Potential Features
 
-*   **Enhanced LLM Integration**: Deeper integration with various LLM models (e.g., Gemini, Claude, GPT-4o, DeepSeek v3) to enhance decision-making and natural language understanding.
-*   **Advanced Agent Customization**: Allowing developers and users to fine-tune AI Agent personalities, behaviors, and abilities.
-*   **Dynamic Content Creation**: Leveraging AI to generate new content, such as quests, dialogues, and storylines.
-*   **Cross-Game Compatibility**: Expanding SIMOS to support AI Agents in a variety of games beyond Sipher Odyssey.
+These features represent potential future developments for SIMOS and the broader ecosystem:
 
-## Implementation Examples / Use Cases
+#### **SIMOS-Related Potential Features**
 
-SIMOS powers a variety of AI-driven features and interactions within games. Here are some examples of how SIMOS is currently being used and envisioned for future applications:
+*   **Agent Personality System**: This system would add unique personality traits to AI Agents, managed by SIMOS, influencing their interactions and behaviors within the game.
+*   **Agent Relationship System**: This feature would enable the tracking and management of relationships between players and AI Agents, with relationship data potentially stored and processed within SIMOS, impacting gameplay and story outcomes.
+*   **Shared Progression Links**: This system would allow for player stats and actions to influence AI Agent attributes, potentially managed through SIMOS, creating a deeper connection between player and companion.
+*   **Talent Trees**: Customizable talent trees for AI Agents, providing strategic development options that could be managed and tracked by SIMOS.
+*   **Permanent Companion Upgrades via Blockchain**: SIMOS could potentially integrate with blockchain technology to manage long-term AI Agent progression and upgrades, especially in new game+ scenarios.
 
-### KAIO in Sipher Odyssey
+#### **Related Potential Features**
 
-KAIO is the flagship AI Agent developed using SIMOS, showcasing its capabilities within the Sipher Odyssey game.
+Features not directly implemented in SIMOS, but highlight the potential future applications and interactions of AI Agents managed by the platform.
 
-*   **AI Livestream Solo Play**: KAIO can autonomously play Sipher Odyssey, demonstrating strategic decision-making and adaptability. (PIC: Dat Tran Thanh - Delivered: January 14, 2025)
-*   **Moonbase Interaction**: KAIO interacts with the Moonbase environment, responding to user inputs and demonstrating dynamic behaviors.
+*   **AI Agent Lore Integration**: In-game events and narratives that could be influenced by AI Agent data stored and processed within SIMOS.
+*   **Companion Quests**: Personalized quests for AI Agents, potentially generated or managed with the assistance of SIMOS's capabilities.
+*   **Content Creation Documentation**: Documentation to guide the development of AI Agent content, potentially including guidelines for integrating with SIMOS.
+*   **In-Game Moonbase Reactive Environment Automa Interactions**: Environmental features within Moonbase that react to AI Agents, showcasing the dynamic behaviors facilitated by SIMOS.
+*   **AI Gaming Agent Showcase Platform (Moonbase)**: Although technically a Moonbase feature, this platform relies on AI Agents developed and managed by SIMOS. It allows players to create and share custom AI Agents, demonstrating the power and flexibility of SIMOS.
+*   **AI Game Modes (Sipher Odyssey)**: These new game modes within Sipher Odyssey showcase the capabilities of AI companions developed using SIMOS, enhancing player engagement.
+    *   **Mode Colosseum - AI vs AI Battle**: A spectator mode that allows players to observe AI Agents, which are managed by SIMOS, battling each other. The mode includes video capture features, providing valuable data and insights into agent behavior.
+*   **AI Automa Decision-Making Debug Tool (Sipher Odyssey)**: This tool provides transparent feedback on AI decisions within the game. While implemented in-game, the underlying decision-making processes are driven by the Utility AI framework, managed by SIMOS.
+*   **AI Automas Recording & Streaming (Sipher Odyssey)**: This feature would enable recording and streaming of AI Automa battles. While implemented in-game, SIMOS's capabilities may be leveraged to enhance the quality and features of these recordings.
+    *   **In-game Content Capture Tools (Sipher Odyssey)**: These tools facilitate the creation of videos and images within Sipher Odyssey. They support content sharing and can be used to showcase the capabilities of AI Agents powered by SIMOS.
+*   **AI Automa Customization (Sipher Odyssey)**: This feature involves expanding customization options for AI companions, affecting their behaviors. SIMOS plays a role in managing and implementing these customizations through its Utility AI framework.
+*   **Team-based Automa Tactics System (Sipher Odyssey)**: This system allows for strategic interactions between players, AI Automas, and AI Agents as advisors. It relies on the intelligence provided by SIMOS to enable complex team-based gameplay.
 
-    *   **Teaser Clip**: [Sipher Moonbase Teaser](https://prod-files-secure.s3.us-west-2.amazonaws.com/a29d0ad0-5c40-46dc-afd9-2ba0cc23a350/53710b70-da62-4b7a-a99c-f8f77e530d45/Sipher_Moonbase_Teaser.mov)
-    *   **In-Engine Terminal Output**:
-        ![Moonbase Terminal Output](https://prod-files-secure.s3.us-west-2.amazonaws.com/a29d0ad0-5c40-46dc-afd9-2ba0cc23a350/8ad6e62a-b626-4701-bc7d-1ea0a79a19b7/image.png)
-    *   **PIC**: Dat Tran Thanh (Incubation), Hải Huỳnh (Technical Artist)
+## Use Cases & Possible Implementations
 
-*   **AI vs AI Colosseum**: KAIO can participate in battles against other AI Agents, providing a spectacle for players and valuable data for developers.
+This section outlines various use cases and implementations of SIMOS, showcasing how it powers AI Agents and facilitates interactions within the Sipher//AGI ecosystem.
 
-    *   **GIF**:
-        ![AI vs AI Colosseum](https://prod-files-secure.s3.us-west-2.amazonaws.com/a29d0ad0-5c40-46dc-afd9-2ba0cc23a350/e5b88d47-291a-463b-9d72-58ba19dc738a/aaaa.gif)
-    *   **Video**: [Colosseum AI vs AI](https://prod-files-secure.s3.us-west-2.amazonaws.com/a29d0ad0-5c40-46dc-afd9-2ba0cc23a350/114046b9-a274-4141-a25c-afe32c6202c4/COLOSSEUM_AI_VS_AI.mov)
+### Sipher Odyssey Implementations
 
-*   **Game Automation**: KAIO can automate tasks within Sipher Odyssey based on user chat commands, such as farming rewards, completing quests, and providing progress reports.
+*   **Sipher Odyssey AI Livestream Solo Play**: KAIO autonomously plays Sipher Odyssey, showcasing strategic decision-making and adaptability driven by SIMOS.
 
-    *   **Screenshot**:
-        ![KAIO Automation](https://prod-files-secure.s3.us-west-2.amazonaws.com/a29d0ad0-5c40-46dc-afd9-2ba0cc23a350/10c79ecb-c37a-40fc-a244-4ff9b8defd2a/KO_page.png)
+*   **Sipher Odyssey AI Moonbase Interaction**: Demonstrates KAIO's ability to interact with the Moonbase environment within Sipher Odyssey, responding to user inputs and exhibiting dynamic behaviors, all managed through SIMOS.
 
-*   **Question & Answer Agent**: KAIO acts as a knowledgeable guide, answering player questions about the game, providing strategic advice, and even offering economic insights within the Sipher ecosystem.
+*   **Sipher Odyssey AI vs AI Colosseum Implementation**: Features KAIO participating in battles against other AI Agents within Sipher Odyssey's Colosseum mode. This showcases SIMOS's ability to manage complex combat scenarios and provides valuable data for developers.
+![AI vs AI Colosseum](colosseum.gif)
 
-    *   **Screenshot**:
-        ![KAIO Q&A](https://prod-files-secure.s3.us-west-2.amazonaws.com/a29d0ad0-5c40-46dc-afd9-2ba0cc23a350/14130a77-9262-469f-ba38-67bee5d26d63/STRIFE.png)
+### KAIO-Specific Implementations
 
-### LLM and Game Engine Interaction
+*   **KAIO Streamer Implementation**: Integration of KAIO as a streamer, allowing it to interact with a live audience and the game environment.
 
-SIMOS facilitates a powerful interaction between LLMs and the game engine. Here's a breakdown of the process:
+*   **KAIO Control Game Automation via Sipher Odyssey**: KAIO automates tasks within Sipher Odyssey based on user chat commands. This includes scheduling in-game automation scripts to farm rewards, items, and quests, and reporting back on progress via an activity log. SIMOS manages the execution of these commands and the integration with the game.
+![KAIO game automation demo](<KO page.png>)
 
-1.  **Game State Declaration**: Smart Objects and their possible states are defined in Unreal Engine and stored in the Knowledge Base. (Code examples are available in the full document).
-2.  **LLM Input & Output Examples**: Sample interactions are provided to the LLM, demonstrating how to interpret game state changes and generate appropriate responses, intentions, and reasoning. (Code examples and explanations are available in the full document).
-3.  **Real-time Updates**: When GameStates change, Unreal Engine sends updates to the LLM via SIMOS.
-4.  **LLM Processing**: The LLM processes the updates using the General System Prompt and the Sipher Odyssey-specific Knowledge Base.
-5.  **Command Generation**: The LLM generates commands for the Unreal Engine, directing AI Agent actions and influencing the game world.
+*   **KAIO as a Question & Answer Agent**: KAIO serves as a knowledgeable guide on Twitter, answering player questions about Sipher Odyssey. It provides strategic advice, explains game mechanics, and offers economic insights within the Sipher ecosystem, all thanks to its connection to the SIMOS Knowledge Base.
+![KAIO Questions & Answers](STRIFE.png)
+
 
 ## How to Use/Setup/Deploy
 
@@ -121,13 +108,13 @@ SIMOS facilitates a powerful interaction between LLMs and the game engine. Here'
 ## Overview of Sipher//AGI
 
 SIPHER//AGI is an ambitious project aimed at revolutionizing the interaction between humans and AI, particularly within the gaming world. It envisions a future where AI companions are integral to the gaming experience, offering personalized interactions, dynamic challenges, and new levels of immersion. SIMOS is a core component of this vision, providing the technological foundation for creating and managing sophisticated AI Agents. Other key parts of the ecosystem include:
-* **Moonbase**: AI Agent discovery and trading platform.
 * **KAIO**: The first AI Gaming Agent developed by Sipher//AGI.
 * **Sipher Odyssey**: Action RPG game developed by Sipher//AGI, as a testing ground for many of the core features.
+* **Moonbase**: AI Agent discovery and trading platform.
 
 ## Contributing
 
-We welcome contributions from the community! If you're interested in contributing to SIMOS, please reach out to Tin Nguyen (CEO) or Susan Pham (Metaverse - PD). We are particularly interested in contributions in the following areas:
+We welcome contributions from the community! If you're interested in contributing to SIMOS, please reach out to us. We are particularly interested in contributions in the following areas:
 
 *   LLM integration and optimization
 *   Unreal Engine development
@@ -140,13 +127,4 @@ We welcome contributions from the community! If you're interested in contributin
 
 ## Contact
 
-For any inquiries or further information, please contact:
-
-*   Tin Nguyen (CEO) - @Tin Nguyen
-*   Susan Pham (Metaverse - PD) - @Susan Pham
-
----
-
-**Document Status**: Ongoing
-
-**Document Update PIC**: @Tin Nguyen (CEO), @Susan Pham (Metaverse - PD)
+For any inquiries or further information, please contact: ___
